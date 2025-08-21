@@ -7,8 +7,8 @@ import java.sql.SQLException;
 public class Conexao {
     //ATRIBUIÇOES DO BANCO DE DADOS
     private final static String URL = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL";
-    private final static String USER = "RM558073";
-    private final static String PASSWORD = "161204";
+    private final static String USER = "";
+    private final static String PASSWORD = "";
 
     private Conexao() {}
 
