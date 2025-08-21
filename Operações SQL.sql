@@ -21,3 +21,12 @@ insert into java_despesa values(101, 'Festa na FIAP', 500,
 
 --SALVA OPERAÇÕES FEITAS, COMO TABELAS E INSERÇÃO DE ELEMENTOS------------------
 commit;
+
+--DELETA UM ELEMENTO PERMANEMTEMENTE -------------------------------------------
+delete from java_categoria where id_categoria = 2;
+
+--VOLTA OPERAÇÃO----------------------------------------------------------------
+rollback;
+
+--ALTERA UM ELEMENTO INSERIDO, PARA NAO DELETAR E INSERIR DE NOVO---------------
+update java_categoria set categoria = 'xyz' where id_categoria = 2;
