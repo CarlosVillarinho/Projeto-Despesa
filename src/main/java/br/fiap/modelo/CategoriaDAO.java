@@ -11,7 +11,7 @@ import java.util.List;
 
 public class CategoriaDAO {
     //ATRIBUTOS
-    private PreparedStatement ps;
+    private PreparedStatement ps; //ELA SABE ONDE ESTA O BANCO DE DADOS, COMO CHEGAR E TRANSPORTA O SQL QUE VAI PARA DENTRO DO BANCO
     private ResultSet rs;
     private String sql;
 
@@ -26,7 +26,7 @@ public class CategoriaDAO {
             ps.execute();
         }
         catch (SQLException e){
-            System.out.println("erro ao inserir no bamco de dados\n" + e);
+            System.out.println("erro ao inserir no banco de dados\n" + e);
         }
     }
 
