@@ -16,8 +16,8 @@ public class TesteDespesa {
         //FORMATA O MODELO DA DATA
         DateTimeFormatter mascara = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-//        Despesa despesa = new Despesa();
 //        //ADICIONANDO ELEMENTOS NA TABELA
+//        Despesa despesa = new Despesa();
 //        despesa.setId(102L);
 //        despesa.setDescricao("Lanche na FIAP");
 //        despesa.setValor(45.00);
@@ -33,13 +33,24 @@ public class TesteDespesa {
 //        despesa.setData(LocalDate.parse("21/08/2025", mascara));
 //        dao.inserir(despesa);
 
-        List<Despesa> Lista = dao.listar();
-        for (Despesa despesa : Lista) {
-            System.out.println(despesa.getId());
+        //APRESENTANDO A LISTA - SELECT
+//        List<Despesa> Lista = dao.listar();
+//        for (Despesa despesa : Lista) {
+//            System.out.println(despesa.getId());
+//            System.out.println(despesa.getDescricao());
+//            System.out.println(despesa.getValor());
+//            System.out.println(despesa.getData());
+//            System.out.println(despesa.getCategoria().getId());
+//        }
+
+        //APRESENTANDO A LISTA RELATORIO - SELECT
+        List<Despesa> lista = dao.relatorio();
+        for (Despesa despesa : lista) {
             System.out.println(despesa.getDescricao());
             System.out.println(despesa.getValor());
             System.out.println(despesa.getData());
-            System.out.println(despesa.getCategoria().getId());
+            System.out.println(despesa.getCategoria().getCategoria());
+            System.out.println("");
         }
     }
 }
